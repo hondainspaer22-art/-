@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Адилет & Элиза — 22.06.2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#c9a96e;--gold-light:#e8d5a3;--gold-dark:#8c6230;--gold-shine:#f5e6b8;--cream:#fdf8f0;--bg1:#0d0905;--bg2:#1a0f06}
+html{scroll-behavior:smooth}
+body{background:var(--bg1);font-family:'Raleway',sans-serif;color:var(--cream);overflow-x:hidden}
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
+.page{min-height:100vh;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 28px 60px;overflow:hidden}
+#p1{background:radial-gradient(ellipse at 20% 20%,rgba(201,169,110,.22) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(140,98,48,.18) 0%,transparent 50%),linear-gradient(135deg,#0d0905 0%,#1e1005 50%,#0d0905 100%)}
+#p2{background:radial-gradient(ellipse at 60% 20%,rgba(201,169,110,.18) 0%,transparent 55%),linear-gradient(160deg,#100b04 0%,#1c1108 50%,#100b04 100%)}
+#p3{background:radial-gradient(ellipse at 80% 20%,rgba(201,169,110,.15) 0%,transparent 55%),linear-gradient(160deg,#100b04 0%,#1c1108 50%,#100b04 100%)}
+#p4{background:radial-gradient(ellipse at 50% 0%,rgba(201,169,110,.2) 0%,transparent 60%),linear-gradient(180deg,#0f0904 0%,#0f0904 100%)}
+#p5{background:radial-gradient(ellipse at 30% 30%,rgba(201,169,110,.18) 0%,transparent 55%),linear-gradient(135deg,#0d0905 0%,#1a0e06 100%)}
+.deco-frame{position:absolute;inset:16px;border:1px solid rgba(201,169,110,.2);pointer-events:none;z-index:0}
+.deco-frame::before{content:'';position:absolute;inset:7px;border:1px solid rgba(201,169,110,.08)}
+.co{position:absolute;width:50px;height:50px;z-index:2}
+.co svg{width:100%;height:100%}
+.co-tl{top:12px;left:12px}.co-tr{top:12px;right:12px;transform:scaleX(-1)}.co-bl{bottom:12px;left:12px;transform:scaleY(-1)}.co-br{bottom:12px;right:12px;transform:scale(-1,-1)}
+.eyebrow{font-size:8px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:14px}
+.script-xl{font-family:'Great Vibes',cursive;font-size:clamp(58px,16vw,90px);color:var(--gold-light);line-height:1;text-align:center;text-shadow:0 0 40px rgba(201,169,110,.35),0 2px 4px rgba(0,0,0,.5)}
+.script-lg{font-family:'Great Vibes',cursive;font-size:clamp(44px,12vw,66px);color:var(--gold-light);line-height:1.15;text-align:center;text-shadow:0 0 30px rgba(201,169,110,.3)}
+.serif-body{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;line-height:1.9;color:rgba(253,248,240,.75);text-align:center;max-width:300px}
+.gd{display:flex;align-items:center;gap:10px;width:220px;margin:16px auto}
+.gd-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.gd-dot{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+.seal-wrap{width:110px;height:110px;cursor:pointer;margin:6px auto 20px;position:relative;animation:sealIn 1.2s .8s cubic-bezier(.34,1.56,.64,1) both}
+.seal-wrap:hover .seal-svg{transform:scale(1.07) rotate(5deg);filter:brightness(1.1) drop-shadow(0 0 18px rgba(201,169,110,.6))}
+.seal-svg{width:100%;height:100%;transition:transform .35s ease,filter .35s ease}
+.seal-glow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,.25) 0%,transparent 70%);animation:glowPulse 3s ease infinite;pointer-events:none}
+.crest-wrap{width:90px;height:100px;margin:0 auto}
+.photo-section{width:100%;max-width:300px;margin:0 auto 16px;position:relative}
+.photo-frame{position:relative;padding:8px;background:linear-gradient(135deg,rgba(201,169,110,.3),rgba(201,169,110,.05),rgba(201,169,110,.25));border:1px solid rgba(201,169,110,.4)}
+.photo-frame img{width:100%;display:block;filter:sepia(10%) contrast(1.05);aspect-ratio:3/4;object-fit:cover;object-position:top center}
+.photo-frame::before{content:'✦ ✦ ✦';position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--bg2);padding:0 10px;color:var(--gold);font-size:9px;letter-spacing:4px}
+.photo-frame::after{content:'✦ ✦ ✦';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:var(--bg2);padding:0 10px;color:var(--gold);font-size:9px;letter-spacing:4px}
+.photo-caption{text-align:center;font-family:'Great Vibes',cursive;font-size:32px;color:var(--gold-light);margin-top:16px;text-shadow:0 0 20px rgba(201,169,110,.3)}
+.date-card{background:linear-gradient(135deg,rgba(201,169,110,.12),rgba(201,169,110,.05));border:1px solid rgba(201,169,110,.3);padding:26px 24px;text-align:center;width:100%;max-width:300px;margin:12px auto;position:relative;backdrop-filter:blur(4px)}
+.date-card::before,.date-card::after{content:'✦';position:absolute;color:var(--gold);font-size:10px;top:-8px;background:transparent;padding:0 8px}
+.date-card::before{left:16px}.date-card::after{right:16px}
+.date-big{font-family:'Cormorant Garamond',serif;font-size:76px;font-weight:300;color:var(--gold-light);line-height:1;text-shadow:0 0 30px rgba(201,169,110,.4)}
+.date-mon{font-size:8px;letter-spacing:5px;text-transform:uppercase;color:var(--cream);opacity:.55;margin:4px 0 6px}
+.date-yr{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:5px;color:var(--gold)}
+.info-row{display:flex;gap:12px;width:100%;max-width:300px;margin:12px auto 0}
+.pill{flex:1;background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.2);padding:14px 8px;text-align:center;backdrop-filter:blur(4px);transition:background .3s,border-color .3s,transform .3s}
+.pill:hover{background:rgba(201,169,110,.14);border-color:rgba(201,169,110,.4);transform:translateY(-3px)}
+.pill .ico{font-size:22px;margin-bottom:5px}.pill .lbl{font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}.pill .val{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--cream)}
+.countdown-wrap{width:100%;max-width:310px;margin:18px auto 0}
+.countdown-label{font-size:8px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:12px;opacity:.8}
+.countdown{display:flex;justify-content:center;gap:10px}
+.cd-box{flex:1;background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.25);padding:12px 4px 8px;text-align:center}
+.cd-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--gold-light);line-height:1;text-shadow:0 0 15px rgba(201,169,110,.4)}
+.cd-unit{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--cream);opacity:.5;margin-top:4px}
+.map-wrap{width:100%;max-width:310px;margin:16px auto 0}
+.map-frame{border:1px solid rgba(201,169,110,.35);overflow:hidden}
+.map-frame iframe{width:100%;height:200px;border:none;filter:sepia(40%) hue-rotate(10deg) saturate(1.2)}
+.map-caption{display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.2);border-top:none}
+.map-caption .map-ico{font-size:20px;flex-shrink:0}
+.map-text{font-size:11px;color:var(--cream);line-height:1.5}
+.map-text strong{display:block;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--gold-light)}
+.map-btn{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:9px 20px;border:1px solid var(--gold);background:transparent;color:var(--gold);font-size:8px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .3s,color .3s}
+.map-btn:hover{background:var(--gold);color:var(--bg1)}
+.timeline{width:100%;max-width:320px;position:relative;padding-left:34px}
+.timeline::before{content:'';position:absolute;left:10px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,transparent,var(--gold) 15%,var(--gold) 85%,transparent);opacity:.5}
+.t-item{position:relative;margin-bottom:22px;cursor:pointer;transition:transform .25s ease}
+.t-item:hover{transform:translateX(4px)}
+.t-item:hover .t-dot{background:var(--gold);box-shadow:0 0 12px rgba(201,169,110,.7)}
+.t-dot{position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg1);border:1.5px solid var(--gold);transition:background .25s,box-shadow .25s}
+.t-time{font-size:8px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:2px;opacity:.8}
+.t-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--cream)}
+.t-desc{font-size:10px;color:var(--cream);opacity:.45;margin-top:2px;line-height:1.5}
+.rsvp-form{width:100%;max-width:310px;margin:0 auto;border:1px solid rgba(201,169,110,.35);padding:22px 20px;background:rgba(201,169,110,.05);backdrop-filter:blur(6px);position:relative}
+.rsvp-form::before{content:'— подтверждение участия —';position:absolute;top:-9px;left:50%;transform:translateX(-50%);font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);background:var(--bg1);padding:0 10px;white-space:nowrap}
+.rsvp-input{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(201,169,110,.25);padding:11px 14px;color:var(--cream);font-family:'Raleway',sans-serif;font-size:12px;margin-bottom:10px;outline:none;transition:border-color .3s}
+.rsvp-input:focus{border-color:var(--gold)}
+.rsvp-input::placeholder{color:rgba(253,248,240,.3);font-size:11px}
+.rsvp-radios{display:flex;gap:10px;margin-bottom:14px}
+.rsvp-radio{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;border:1px solid rgba(201,169,110,.2);cursor:pointer;font-size:10px;letter-spacing:1px;color:rgba(253,248,240,.6);transition:all .3s;background:transparent;text-transform:uppercase}
+.rsvp-radio.selected{border-color:var(--gold);background:rgba(201,169,110,.12);color:var(--gold)}
+.rsvp-btn{width:100%;padding:13px;border:1px solid var(--gold);background:transparent;color:var(--gold);font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:background .3s,color .3s}
+.rsvp-btn:hover{background:var(--gold);color:var(--bg1)}
+.rsvp-success{display:none;text-align:center;padding:16px;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-light);font-size:15px;line-height:1.7}
+.music-btn{position:fixed;top:20px;left:16px;z-index:50;width:40px;height:40px;border-radius:50%;background:rgba(201,169,110,.1);border:1px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s;backdrop-filter:blur(8px)}
+.music-btn:hover{background:rgba(201,169,110,.2)}
+.music-bars{display:flex;align-items:center;gap:2px;height:16px}
+.music-bar{width:3px;background:var(--gold);border-radius:2px}
+.music-bars.active .music-bar:nth-child(1){animation:bar1 .6s ease infinite}
+.music-bars.active .music-bar:nth-child(2){animation:bar2 .8s ease infinite}
+.music-bars.active .music-bar:nth-child(3){animation:bar3 .5s ease infinite}
+@keyframes bar1{0%,100%{height:4px}50%{height:14px}}
+@keyframes bar2{0%,100%{height:10px}50%{height:4px}}
+@keyframes bar3{0%,100%{height:6px}50%{height:12px}}
+.closing-names{font-family:'Great Vibes',cursive;font-size:clamp(46px,13vw,68px);color:var(--gold-light);text-align:center;text-shadow:0 0 40px rgba(201,169,110,.4);animation:shimmer 4s ease infinite alternate}
+.hearts-row{color:var(--gold);font-size:16px;letter-spacing:8px;margin:10px 0;text-align:center}
+.heart-btn{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:12px 28px;border:1px solid var(--gold);background:transparent;color:var(--gold);font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:background .3s,color .3s,transform .2s,box-shadow .3s}
+.heart-btn:hover{background:var(--gold);color:var(--bg1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,169,110,.3)}
+.nav-dots{position:fixed;right:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:50}
+.nav-dot{width:7px;height:7px;border-radius:50%;border:1px solid rgba(201,169,110,.5);cursor:pointer;transition:background .3s,transform .3s,border-color .3s}
+.nav-dot.active{background:var(--gold);border-color:var(--gold);transform:scale(1.4);box-shadow:0 0 8px rgba(201,169,110,.6)}
+.ribbon{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,var(--gold),var(--gold-shine),var(--gold),transparent)}
+.scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:appear 1s 3s ease forwards;cursor:pointer;z-index:2}
+.scroll-hint span{font-size:7px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.7}
+.scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollDrop 1.5s ease infinite}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vis{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.15s}.reveal-delay-2{transition-delay:.3s}.reveal-delay-3{transition-delay:.45s}.reveal-delay-4{transition-delay:.6s}.reveal-delay-5{transition-delay:.75s}
+.cover-anim-1{animation:fadeUp .9s .1s ease both}.cover-anim-2{animation:fadeUp .9s .25s ease both}.cover-anim-3{animation:fadeUp .9s .4s ease both}.cover-anim-4{animation:fadeUp .9s .55s ease both}.cover-anim-5{animation:fadeUp .9s 1.6s ease both}
+@keyframes sealIn{from{opacity:0;transform:scale(0) rotate(-30deg)}70%{transform:scale(1.12) rotate(5deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes glowPulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
+@keyframes appear{to{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmer{from{text-shadow:0 0 30px rgba(201,169,110,.3)}to{text-shadow:0 0 60px rgba(201,169,110,.7),0 0 100px rgba(201,169,110,.2)}}
+@keyframes scrollDrop{0%,100%{transform:scaleY(0);transform-origin:top;opacity:0}50%{transform:scaleY(1);opacity:1}}
+.floating-hearts{position:fixed;inset:0;pointer-events:none;z-index:100}
+.fh{position:absolute;bottom:-40px;animation:floatHeart linear forwards;opacity:0}
+@keyframes floatHeart{0%{opacity:0;transform:translateY(0) scale(.5) rotate(-10deg)}20%{opacity:1}80%{opacity:.7}100%{opacity:0;transform:translateY(-100vh) scale(1.2) rotate(15deg)}}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+<div class="floating-hearts" id="hearts"></div>
+<div class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Музыка">
+  <div class="music-bars" id="musicBars">
+    <div class="music-bar" style="height:6px"></div>
+    <div class="music-bar" style="height:12px"></div>
+    <div class="music-bar" style="height:8px"></div>
+  </div>
+</div>
+<nav class="nav-dots">
+  <div class="nav-dot active" onclick="goPage(0)"></div>
+  <div class="nav-dot" onclick="goPage(1)"></div>
+  <div class="nav-dot" onclick="goPage(2)"></div>
+  <div class="nav-dot" onclick="goPage(3)"></div>
+  <div class="nav-dot" onclick="goPage(4)"></div>
+</nav>
+
+<!-- PAGE 1 COVER -->
+<section class="page" id="p1">
+  <div class="ribbon"></div><div class="deco-frame"></div>
+  <div class="co co-tl"><svg viewBox="0 0 50 50" fill="none"><path d="M2 48L2 2L48 2" stroke="#c9a96e" stroke-width="1.2"/><circle cx="2" cy="2" r="3" fill="none" stroke="#c9a96e" stroke-width="1"/><circle cx="25" cy="2" r="1.2" fill="#c9a96e" opacity=".4"/><circle cx="2" cy="25" r="1.2" fill="#c9a96e" opacity=".4"/></svg></div>
+  <div class="co co-tr"><svg viewBox="0 0 50 50" fill="none"><path d="M2 48L2 2L48 2" stroke="#c9a96e" stroke-width="1.2"/><circle cx="2" cy="2" r="3" fill="none" stroke="#c9a96e" stroke-width="1"/><circle cx="25" cy="2" r="1.2" fill="#c9a96e" opacity=".4"/><circle cx="2" cy="25" r="1.2" fill="#c9a96e" opacity=".4"/></svg></div>
+  <div class="co co-bl"><svg viewBox="0 0 50 50" fill="none"><path d="M2 48L2 2L48 2" stroke="#c9a96e" stroke-width="1.2"/><circle cx="2" cy="2" r="3" fill="none" stroke="#c9a96e" stroke-width="1"/><circle cx="25" cy="2" r="1.2" fill="#c9a96e" opacity=".4"/><circle cx="2" cy="25" r="1.2" fill="#c9a96e" opacity=".4"/></svg></div>
+  <div class="co co-br"><svg viewBox="0 0 50 50" fill="none"><path d="M2 48L2 2L48 2" stroke="#c9a96e" stroke-width="1.2"/><circle cx="2" cy="2" r="3" fill="none" stroke="#c9a96e" stroke-width="1"/><circle cx="25" cy="2" r="1.2" fill="#c9a96e" opacity=".4"/><circle cx="2" cy="25" r="1.2" fill="#c9a96e" opacity=".4"/></svg></div>
+  <div class="eyebrow cover-anim-1">— Торжественное приглашение —</div>
+  <div class="eyebrow cover-anim-2" style="color:rgba(253,248,240,.4);margin-bottom:10px">Вы приглашены</div>
+  <div class="script-xl cover-anim-2">на свадьбу</div>
+  <div class="gd cover-anim-3"><div class="gd-line"></div><div class="gd-dot"></div><div class="gd-dot" style="margin:0 2px"></div><div class="gd-dot"></div><div class="gd-line"></div></div>
+  <div class="seal-wrap" onclick="goPage(1)">
+    <div class="seal-glow"></div>
+    <svg class="seal-svg" viewBox="0 0 100 100" fill="none">
+      <defs><radialGradient id="sg" cx="35%" cy="30%" r="70%"><stop offset="0%" stop-color="#f0d890"/><stop offset="40%" stop-color="#c9a96e"/><stop offset="100%" stop-color="#6b4010"/></radialGradient><filter id="sha"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#c9a96e" flood-opacity=".4"/></filter></defs>
+      <path d="M50 6L57 10L65 8L69 15L77 15L79 23L87 25L87 33L93 38L91 46L96 52L91 58L94 66L87 70L87 78L79 80L76 88L68 87L62 93L55 90L50 94L45 90L38 93L32 87L24 88L21 80L13 78L13 70L6 66L9 58L4 52L9 46L7 38L13 33L13 25L21 23L23 15L31 15L35 8L43 10Z" fill="url(#sg)" filter="url(#sha)"/>
+      <circle cx="50" cy="50" r="29" fill="none" stroke="#8c6230" stroke-width="1" opacity=".5"/>
+      <text x="50" y="27" text-anchor="middle" font-size="5" fill="#5a3010" font-family="serif" opacity=".7" letter-spacing="2">✦ ✦ ✦ ✦ ✦</text>
+      <text x="50" y="57" text-anchor="middle" font-family="Georgia,serif" font-size="21" font-weight="bold" fill="#3a1e06" letter-spacing="3">A&Э</text>
+      <text x="50" y="69" text-anchor="middle" font-family="sans-serif" font-size="4.5" fill="#5a3010" letter-spacing="2" opacity=".8">НАЖМИТЕ</text>
+    </svg>
+  </div>
+  <svg class="crest-wrap cover-anim-4" viewBox="0 0 100 110" fill="none">
+    <path d="M33 30L39 20L50 27L61 20L67 30L50 26Z" fill="none" stroke="#c9a96e" stroke-width="1.3"/>
+    <circle cx="39" cy="20" r="2.2" fill="#c9a96e"/><circle cx="50" cy="15" r="2.8" fill="#c9a96e"/><circle cx="61" cy="20" r="2.2" fill="#c9a96e"/>
+    <path d="M26 33L74 33L74 72Q50 86 26 72Z" fill="none" stroke="#c9a96e" stroke-width="1.3"/>
+    <path d="M30 37L70 37L70 70Q50 82 30 70Z" fill="none" stroke="#c9a96e" stroke-width=".5" opacity=".35"/>
+    <text x="50" y="63" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="bold" fill="#c9a96e" letter-spacing="4">A·Э</text>
+    <path d="M26 58Q16 52 8 57Q15 63 26 61" fill="none" stroke="#c9a96e" stroke-width=".9" opacity=".6"/>
+    <path d="M74 58Q84 52 92 57Q85 63 74 61" fill="none" stroke="#c9a96e" stroke-width=".9" opacity=".6"/>
+    <path d="M34 88Q50 95 66 88" fill="none" stroke="#c9a96e" stroke-width="1.1"/>
+    <text x="50" y="93" text-anchor="middle" font-size="5" fill="#c9a96e" font-family="sans-serif" letter-spacing="2" opacity=".6">2026</text>
+  </svg>
+  <div class="scroll-hint cover-anim-5" onclick="goPage(1)"><span>листать</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- PAGE 2 PHOTO -->
+<section class="page" id="p2">
+  <div class="ribbon"></div>
+  <div class="eyebrow reveal">— жених и невеста —</div>
+  <div class="photo-section reveal reveal-delay-1">
+    <div class="photo-frame">
+      <!-- ЗАМЕНИТЕ src НА СВОЁ ФОТО -->
+      <img src="/123456789qwertyu.jpg">
+    </div>
+  </div>
+  <div class="photo-caption reveal reveal-delay-2">Адилет &amp; Элиза</div>
+  <div class="gd reveal reveal-delay-3"><div class="gd-line"></div><div class="gd-dot"></div><div class="gd-line"></div></div>
+  <p class="serif-body reveal reveal-delay-3" style="margin-top:10px">Начало одной истории на двоих — истории любви, верности и счастья.</p>
+</section>
+
+<!-- PAGE 3 DETAILS -->
+<section class="page" id="p3">
+  <div class="ribbon"></div>
+  <div class="eyebrow reveal">— с радостью сообщаем —</div>
+  <div class="script-lg reveal reveal-delay-1">Адилет<br><span style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--gold);letter-spacing:3px;display:block;margin:2px 0">&amp;</span>Элиза</div>
+  <div class="gd reveal reveal-delay-2"><div class="gd-line"></div><div class="gd-dot"></div><div class="gd-line"></div></div>
+  <div class="date-card reveal reveal-delay-3">
+    <div class="date-big">22</div>
+    <div class="date-mon">Июня · Понедельник</div>
+    <div class="date-yr">2 0 2 6</div>
+  </div>
+  <div class="info-row reveal reveal-delay-4">
+    <div class="pill"><div class="ico">🕖</div><div class="lbl">Время</div><div class="val">19:00</div></div>
+    <div class="pill"><div class="ico">🏛</div><div class="lbl">Место</div><div class="val" style="font-size:11px">Датка рестораны</div></div>
+  </div>
+  <div class="countdown-wrap reveal reveal-delay-5">
+    <div class="countdown-label">— до свадьбы осталось —</div>
+    <div class="countdown">
+      <div class="cd-box"><div class="cd-num" id="cd-d">00</div><div class="cd-unit">дней</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-h">00</div><div class="cd-unit">часов</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-m">00</div><div class="cd-unit">минут</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-s">00</div><div class="cd-unit">секунд</div></div>
+    </div>
+  </div>
+  <div class="map-wrap reveal" style="transition-delay:.9s">
+    <div class="map-caption">
+      <div class="map-ico">📍</div>
+      <div class="map-text"><strong>Датка рестораны</strong>Кыргызстан</div>
+    </div>
+    <div style="text-align:center;margin-top:10px">
+      <a class="map-btn" href="https://maps.app.goo.gl/bH5vjWsuDBoCyDo58" target="_blank">🗺 Открыть в Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 4 PROGRAM -->
+<section class="page" id="p4">
+  <div class="ribbon"></div>
+  <div class="script-lg reveal" style="margin-bottom:6px">Программа вечера</div>
+  <div class="gd reveal reveal-delay-1" style="margin-bottom:28px"><div class="gd-line"></div><div class="gd-dot"></div><div class="gd-line"></div></div>
+  <div class="timeline reveal reveal-delay-1">
+    <div class="t-item"><div class="t-dot"></div><div class="t-time">19:00</div><div class="t-name">Встреча гостей</div><div class="t-desc">Приветственные напитки и закуски</div></div>
+    <div class="t-item"><div class="t-dot"></div><div class="t-time">19:30</div><div class="t-name">Торжественная церемония</div><div class="t-desc">Обряд бракосочетания</div></div>
+    <div class="t-item"><div class="t-dot"></div><div class="t-time">20:00</div><div class="t-name">Праздничный банкет</div><div class="t-desc">Торжественный ужин, тосты и поздравления</div></div>
+    <div class="t-item"><div class="t-dot"></div><div class="t-time">21:00</div><div class="t-name">Первый танец</div><div class="t-desc">Танец молодожёнов и музыкальная программа</div></div>
+    <div class="t-item" style="margin-bottom:0"><div class="t-dot"></div><div class="t-time">22:00</div><div class="t-name">Торт молодожёнов</div><div class="t-desc">Разрезание торта и праздничный десерт</div></div>
+  </div>
+</section>
+
+<!-- PAGE 5 CLOSING + RSVP -->
+<section class="page" id="p5">
+  <div class="ribbon"></div>
+  <svg width="52" height="52" viewBox="0 0 60 56" fill="none" class="reveal" style="margin-bottom:14px"><path d="M30 52Q6 34 6 19C6 10 13 6 20 6C25 6 28.5 9 30 12C31.5 9 35 6 40 6C47 6 54 10 54 19C54 34 30 52 30 52Z" fill="none" stroke="#c9a96e" stroke-width="1.5"/></svg>
+  <div class="rsvp-form reveal reveal-delay-1">
+    <div id="rsvpForm">
+      <input type="text" class="rsvp-input" id="rsvpName" placeholder="Ваше имя" maxlength="50"/>
+      <div class="rsvp-radios">
+        <div class="rsvp-radio selected" id="r-yes" onclick="selectRsvp('yes')">✓ Буду</div>
+        <div class="rsvp-radio" id="r-no" onclick="selectRsvp('no')">✗ Не смогу</div>
+      </div>
+      <button class="rsvp-btn" onclick="submitRsvp()">Подтвердить участие</button>
+    </div>
+    <div class="rsvp-success" id="rsvpSuccess">
+      <div style="font-size:28px;margin-bottom:10px">🌸</div>
+      Спасибо, <span id="rsvpNameDisplay"></span>!<br>КӨТ!!!
+    </div>
+  </div>
+  <div class="gd reveal reveal-delay-2" style="margin-top:20px"><div class="gd-line"></div><div class="gd-dot"></div><div class="gd-line"></div></div>
+  <div class="closing-names reveal reveal-delay-3">Адилет &amp; Элиза</div>
+  <div class="hearts-row reveal reveal-delay-4">♡ &nbsp; ♡ &nbsp; ♡</div>
+  <button class="heart-btn reveal reveal-delay-5" onclick="launchHearts()">♡ &nbsp; поздравить молодожёнов</button>
+  <div class="eyebrow reveal" style="margin-top:30px;opacity:.4">22 · 06 · 2026</div>
+</section>
+
+<script>
+// Particles canvas
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+resize(); window.addEventListener('resize', resize);
+const pts = [];
+for (let i = 0; i < 55; i++) pts.push({ x: Math.random() * innerWidth, y: Math.random() * innerHeight, r: Math.random() * 1.5 + 0.3, vx: (Math.random() - 0.5) * 0.25, vy: -(Math.random() * 0.5 + 0.1), a: Math.random() * 0.5 + 0.1, f: Math.random() * Math.PI * 2, fs: Math.random() * 0.03 + 0.01 });
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  pts.forEach(p => {
+    p.x += p.vx; p.y += p.vy; p.f += p.fs;
+    if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width; }
+    if (p.x < -10) p.x = canvas.width + 10;
+    if (p.x > canvas.width + 10) p.x = -10;
+    const a = p.a * (0.6 + 0.4 * Math.sin(p.f));
+    ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(201,169,110,${a})`; ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+draw();
+
+// Navigation
+const pages = ['p1', 'p2', 'p3', 'p4', 'p5'];
+function goPage(i) { document.getElementById(pages[i]).scrollIntoView({ behavior: 'smooth' }); }
+const obs = new IntersectionObserver(e => { e.forEach(en => { if (en.isIntersecting) { const i = pages.indexOf(en.target.id); if (i !== -1) document.querySelectorAll('.nav-dot').forEach((d, j) => d.classList.toggle('active', j === i)); } }); }, { threshold: 0.5 });
+pages.forEach(id => obs.observe(document.getElementById(id)));
+const ro = new IntersectionObserver(e => { e.forEach(en => { if (en.isIntersecting) en.target.classList.add('vis'); }); }, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// Countdown
+function updateCountdown() { const t = new Date('2026-06-22T19:00:00'); let d = t - new Date(); if (d < 0) d = 0; document.getElementById('cd-d').textContent = String(Math.floor(d / 86400000)).padStart(2, '0'); document.getElementById('cd-h').textContent = String(Math.floor(d % 86400000 / 3600000)).padStart(2, '0'); document.getElementById('cd-m').textContent = String(Math.floor(d % 3600000 / 60000)).padStart(2, '0'); document.getElementById('cd-s').textContent = String(Math.floor(d % 60000 / 1000)).padStart(2, '0'); }
+updateCountdown(); setInterval(updateCountdown, 1000);
+
+// Hearts
+function launchHearts() { const c = document.getElementById('hearts'); const e = ['♡', '❤', '💛', '✨', '💫', '🌸', '💍']; for (let i = 0; i < 24; i++) { setTimeout(() => { const el = document.createElement('div'); el.className = 'fh'; el.textContent = e[Math.floor(Math.random() * e.length)]; el.style.left = Math.random() * 100 + 'vw'; el.style.fontSize = (14 + Math.random() * 18) + 'px'; const dur = 2.5 + Math.random() * 2; el.style.animationDuration = dur + 's'; c.appendChild(el); setTimeout(() => el.remove(), dur * 1000 + 100); }, i * 80); } }
+
+// Music with real file and muted autoplay attempt
+let playing = false;
+let audio = null;
+function initMusic() {
+  if (!audio) {
+    audio = new Audio();
+    // ⬇️⬇️ ЗАМЕНИТЕ НА РЕАЛЬНУЮ ССЫЛКУ НА МУЗЫКУ (MP3) ⬇️⬇️
+    audio.src = '/qwertyui234567890.mp3'; // тестовый трек
+    audio.loop = true;
+    audio.volume = 0.4;
+  }
+}
+function toggleMusic() {
+  const bars = document.getElementById('musicBars');
+  initMusic();
+  if (playing) {
+    audio.pause();
+    playing = false;
+    bars.classList.remove('active');
+  } else {
+    audio.play().then(() => {
+      playing = true;
+      bars.classList.add('active');
+    }).catch(err => {
+      console.warn('Автовоспроизведение заблокировано. Нажмите ещё раз.');
+      alert('Нажмите кнопку музыки, чтобы разрешить воспроизведение');
+    });
+  }
+}
+// Attempt muted autoplay on load
+window.addEventListener('load', () => {
+  initMusic();
+  audio.muted = true;
+  audio.play().then(() => {
+    // Unmute on first user interaction anywhere
+    const unMute = () => {
+      audio.muted = false;
+      document.body.removeEventListener('click', unMute);
+      document.getElementById('musicBtn').removeEventListener('click', unMute);
+    };
+    document.body.addEventListener('click', unMute, { once: true });
+    document.getElementById('musicBtn').addEventListener('click', unMute, { once: true });
+  }).catch(e => console.log('muted autoplay blocked', e));
+});
+
+// RSVP
+let rsvpChoice = 'yes';
+function selectRsvp(v) { rsvpChoice = v; document.getElementById('r-yes').classList.toggle('selected', v === 'yes'); document.getElementById('r-no').classList.toggle('selected', v === 'no'); }
+function submitRsvp() { const name = document.getElementById('rsvpName').value.trim(); if (!name) { document.getElementById('rsvpName').focus(); document.getElementById('rsvpName').placeholder = 'Введите ваше имя ✦'; return; } document.getElementById('rsvpNameDisplay').textContent = name; document.getElementById('rsvpForm').style.display = 'none'; document.getElementById('rsvpSuccess').style.display = 'block'; if (rsvpChoice === 'yes') launchHearts(); }
+</script>
+</body>
+</html>
